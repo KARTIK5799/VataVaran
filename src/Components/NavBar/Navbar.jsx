@@ -7,7 +7,7 @@ const Navbar = () => {
       <nav className={style.navbar}>
       <div className={style.logoSection}>
       <img src={logo} alt="" className={style.logo} />
-      <p className={style.logotitle}>VataVaran</p>
+      <p className={style.logotitle}>Vata<span>Varan</span></p>
       </div>
       <div className={style.themeSection}>
         <input type="checkbox" name="" id="darkmode-toggle" className={style.toggleInput} />

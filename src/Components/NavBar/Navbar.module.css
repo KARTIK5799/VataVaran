@@ -31,9 +31,17 @@
 }
 
 .logotitle {
-    color: white;
+    background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+   background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 700;
     font-size: 2rem;
+}
+.logotitle span{
+    background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+   background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 .themeToggle {
