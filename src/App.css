@@ -7,5 +7,11 @@ body,html{
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-color: #0F2836;
+  background-color: var(--primaryBg);
+}
+
+:root{
+  --primaryBg:#0F2836;
+  --primaryText:#fff;
+  --secondaryText:#898989;
 }
