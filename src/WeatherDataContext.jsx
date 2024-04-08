@@ -12,7 +12,7 @@ const WeatherProvider = ({ children }) => {
     "dubai",
   ]);
   const [watchlistItems, setWatchlistItems] = useState([]);
-console.log(watchlistItems)
+  console.log(watchlistItems);
 
   const [mostSearchedData, setmostSearchedData] = useState([]);
 
@@ -32,8 +32,6 @@ console.log(watchlistItems)
       }
 
       const data = await response.json();
-
-    
 
       return data;
     } catch (error) {

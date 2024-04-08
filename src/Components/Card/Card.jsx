@@ -10,7 +10,10 @@ import rain from '../../assets/rain.svg'
 import CityCards from "../CityCards/CityCards";
 import { useWeatherContext } from "../../WeatherDataContext";
 
+
 const Card = ({ type, mostCityName, mostCityTemp, condition }) => {
+
+  
   const { weatherData, watchlistItems, setWatchlistItems } = useWeatherContext();
 
   const addToWatchlist = () => {

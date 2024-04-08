@@ -1,15 +1,12 @@
+import style from "./CityCards.module.css";
+import sun from "../../assets/sunny.svg";
+import cloudy from "../../assets/partly_cloudy.svg";
+import snow from "../../assets/snow.svg";
+import humid from "../../assets/humid.svg";
+import rain from "../../assets/rain.svg";
 
-import style from './CityCards.module.css'; 
-import sun from '../../assets/sunny.svg';
-import cloudy from '../../assets/partly_cloudy.svg'
 
-import snow from '../../assets/snow.svg';
-import humid from '../../assets/humid.svg'
-
-import rain from '../../assets/rain.svg'
-
-const CityCards = ({ text,cityName,cityTemp,cityCondition }) => {
-
+const CityCards = ({ text, cityName, cityTemp, cityCondition }) => {
   const renderWeatherImageCards = () => {
     switch (cityCondition) {
       case "Sunny":
@@ -31,12 +28,13 @@ const CityCards = ({ text,cityName,cityTemp,cityCondition }) => {
         return null;
     }
   };
+
+
   return (
     <div className={style.watchListCard}>
-   {renderWeatherImageCards()}
+      {renderWeatherImageCards()}
       <p>{cityName}</p>
       <p>{cityTemp}&#176; C</p>
-      
     </div>
   );
 };
