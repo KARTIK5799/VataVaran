@@ -8,8 +8,8 @@
     color: var(--primaryText);
 }
 .searchedCard{
-    width: 50rem;
-    height: 30rem;
+    width: 45rem;
+    height: 22rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,8 +17,8 @@
 }
 
 .mostCard{
-    width: 11rem;
-    height: 11rem;
+    width: 10.5rem;
+    height: 10.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,15 +26,15 @@
 gap:0.7rem;
 }
 .watchListCards{
-width: 30rem;
-height:43rem ;
+width: 25rem;
+height:33.5rem ;
 display: flex;
 align-items: center;
 justify-content: start;
 flex-direction: column;
-padding: 1rem 1rem;
+padding: 0.5rem 0.5rem;
 overflow-y: scroll;
-gap: 2rem;
+gap: 1rem;
 
 
 }
@@ -56,7 +56,7 @@ font-size: 2rem;
     gap: 2rem;
 }
 .weatherImg>img{
-    height: 15rem;
+    height: 10rem;
     
 }
 .weatherImg button{
@@ -71,16 +71,16 @@ font-size: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 0.5rem;
 }
 .searchedTemperature{
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .searchedWeatherCondition{
-font-size: 3rem;
+font-size: 2rem;
 }
 .searchedPlace{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 .windHumidity{
@@ -98,7 +98,7 @@ font-size: 3rem;
    
 }
 .humiditySection img ,.windSection img{
-    height: 3rem;
+    height: 2.5rem;
 }
 .searchedNoDataCard{
     display: flex;
@@ -118,3 +118,17 @@ height: 20rem;
     border-bottom: 1px solid white;
 }
 
+@media screen and (max-width: 767px) {
+   .mostCard{
+display: none;
+    }
+.searchedCard,.watchListCards{
+    width: 93vw;
+}
+.searchedCard{
+    flex-direction: column;
+    gap: 0.2rem;
+    height: 35rem;
+    max-height: 40rem;
+}
+}

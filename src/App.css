@@ -11,12 +11,16 @@ body,html{
   background-color: var(--primaryBg);
 }
 
-:root{
+[data-theme="dark"]{
   --primaryBg:#0F2836;
   --primaryText:#fff;
   --secondaryText:#898989;
 }
-
+[data-theme="light"]{
+  --primaryBg:#ffffff;
+  --primaryText:#1c1c1c;
+  --secondaryText:#898989;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -24,3 +28,11 @@ body,html{
   'GRAD' 0,
   'opsz' 24
 }
+
+@media screen and (max-width: 767px) {
+  body,html{
+    height: auto;
+  overflow-y: scroll;
+}
+}
+
