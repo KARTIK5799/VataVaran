@@ -1,4 +1,4 @@
-# Weather Website with Wishlist Feature VataVaranm
+# Weather Website with Wishlist Feature-VataVaranm
 
 This project is a weather website built using Vite and React.js. It allows users to search for weather information for any city using a public API. Additionally, users can add cities to their wishlist to keep track of the weather in those locations.
 
