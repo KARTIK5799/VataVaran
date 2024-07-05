@@ -1,0 +1,19 @@
+
+
+:root {
+    --chart-border-light: #007bff;
+    --chart-background-light: rgb(255, 255, 255);
+    --chart-border-dark: #FF5733;
+    --chart-background-dark: rgb(219, 1, 1);
+  }
+  
+  [data-theme='dark'] {
+    --chart-border: var(--chart-border-dark);
+    --chart-background: var(--chart-background-dark);
+  }
+  
+  [data-theme='light'] {
+    --chart-border: var(--chart-border-light);
+    --chart-background: var(--chart-background-light);
+  }
+  

@@ -7,9 +7,11 @@ import rain from "../../assets/rain.svg";
 
 
 const CityCards = ({ text, cityName, cityTemp, cityCondition }) => {
+  
   const renderWeatherImageCards = () => {
     switch (cityCondition) {
       case "Sunny":
+        case "Clear":
         return <img src={sun} alt="" />;
       case "Mist":
         return <img src={humid} alt="" />;
@@ -21,9 +23,12 @@ const CityCards = ({ text, cityName, cityTemp, cityCondition }) => {
       case "Light rain":
       case "Patchy rain nearby":
       case "Moderate rain":
+      case "Moderate or heavy rain shower":
         return <img src={rain} alt="" />;
       case "Overcast":
+      case "Fog":
         return <img src={cloudy} alt="" />;
+    
       default:
         return null;
     }
@@ -31,6 +36,7 @@ const CityCards = ({ text, cityName, cityTemp, cityCondition }) => {
 
 
   return (
+    
     <div className={style.watchListCard}>
       {renderWeatherImageCards()}
       <p>{cityName}</p>

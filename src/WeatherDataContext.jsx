@@ -4,17 +4,32 @@ const WeatherContext = createContext();
 
 const WeatherProvider = ({ children }) => {
   const [weatherData, setWeatherData] = useState(null);
-  const [city, setCity] = useState(null);
+  const [city, setCity] = useState("pune");
   const [mostSearched, setMostSearched] = useState([
     "delhi",
     "mumbai",
     "new-york",
     "dubai",
+    "london",
+    "paris",
+    "tokyo",
+    "sydney",
+    "rome",
+    "berlin",
+    "hong-kong",
+    "shanghai",
+    "singapore",
+    "istanbul",
+    "rio-de-janeiro",
+    "mexico-city",
+    "toronto",
+    "buenos-aires",
+    "cape-town",
+    "athens"
   ]);
   const [watchlistItems, setWatchlistItems] = useState([]);
-  console.log(watchlistItems);
-
-  const [mostSearchedData, setmostSearchedData] = useState([]);
+  const [mostSearchedData, setMostSearchedData] = useState([]);
+  const [searchedCities, setSearchedCities] = useState([]); 
 
   const updateWeatherData = (data) => {
     setWeatherData(data);
@@ -32,7 +47,6 @@ const WeatherProvider = ({ children }) => {
       }
 
       const data = await response.json();
-
       return data;
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -41,14 +55,25 @@ const WeatherProvider = ({ children }) => {
     }
   };
 
+  const addSearchedCity = (city) => {
+    setSearchedCities((prevCities) => {
+    
+      if (!prevCities.includes(city)) {
+        console.log(searchedCities);
+        return [...prevCities, city];
+     
+      }
+      return prevCities;
+    });
+  };
+
   useEffect(() => {
-    if (city) {
-      fetchWeather(city).then((data) => {
-        if (data) {
-          updateWeatherData(data);
-        }
-      });
-    }
+   
+    fetchWeather(city).then((data) => {
+      if (data) {
+        updateWeatherData(data);
+      }
+    });
   }, [city]);
 
   useEffect(() => {
@@ -56,10 +81,10 @@ const WeatherProvider = ({ children }) => {
       const mostCityData = await Promise.all(
         mostSearched.map((city) => fetchWeather(city))
       );
-      setmostSearchedData(mostCityData);
+      setMostSearchedData(mostCityData);
     };
     fetchWatchlistData();
-  }, []);
+  }, [mostSearched]);
 
   return (
     <WeatherContext.Provider
@@ -71,8 +96,9 @@ const WeatherProvider = ({ children }) => {
         watchlistItems,
         setWatchlistItems,
         mostSearchedData,
-        setmostSearchedData,
         setMostSearched,
+        addSearchedCity, 
+        searchedCities 
       }}
     >
       {children}

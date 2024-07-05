@@ -7,6 +7,13 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: var(--primaryText);
 }
+.chartCard{
+    display: flex; 
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
 .searchedCard{
     width: 45rem;
     height: 22rem;
@@ -119,9 +126,7 @@ height: 20rem;
 }
 
 @media screen and (max-width: 767px) {
-   .mostCard{
-display: none;
-    }
+
 .searchedCard,.watchListCards{
     width: 93vw;
 }

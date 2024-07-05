@@ -1,40 +1,85 @@
-.weatherViewSection{
-    width: 100vw;
-    height: 100%;
-    margin-top: 2rem;
-   padding:  0 10rem;
-   display: flex;
-
- gap: 1rem;
+.weatherViewSection {
+  width: 100vw;
+  height: 100%;
+  margin-top: 30rem;
+  padding: 0 10rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  position: relative; 
 }
+.weatherChartSection{
+  display: flex; 
+  gap: 2rem;
+margin-top: 2rem;
+width: 100%;
+height: 100%;justify-content: center;
 
-.weatherCardSection{
+}
+.weatherCardSection {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-.mostSearchedSection{
+
+.mostSearchedSection {
   display: flex;
   align-items: center;
-
   gap: 1rem;
-  width: 45rem;
+  width: 70vw; 
+  overflow: hidden;
+  position: relative; 
 }
 
+.mostSearchedContainer {
+  display: flex;
+  padding: 10px 10px ;
+  
+ 
+    position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.sliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.sliderButtonLeft {
+  left: 0;
+}
+
+.sliderButtonRight {
+  right: 0;
+}
 
 @media screen and (max-width: 767px) {
-  .weatherViewSection{
-    padding:0 1rem 1rem 1rem;
-    flex-direction: column; 
-    gap: 0.5rem;
-
-    
+  .weatherViewSection {
+      padding: 0 1rem 1rem 1rem;
+      flex-direction: column;
+      gap: 0.5rem;
   }
-  .mostSearchedSection{
-    flex-direction: column;
-    align-items: flex-start;
-
-  }
+.mostSearchedSection{
+  width: 95vw;
+}
  
+  
+  .weatherChartSection{
+    flex-direction: column;
+    width: auto;
+  }
 }
